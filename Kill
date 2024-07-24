@@ -1,0 +1,9 @@
+local button = script.Parent  -- Assuming the script is in the button
+
+button.MouseButton1Click:Connect(function()
+  for _, player in pairs(game.Players:GetPlayers()) do
+    if player.Character then
+      player.Character:BreakJoints()
+    end
+  end
+end)
